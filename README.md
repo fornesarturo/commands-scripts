@@ -3,8 +3,8 @@
 1. [Heroku](#heroku)
 2. [Processes](#processes)
 3. [Python](#python)
-    * [Pip](pip)
-    * [Virtual Environments](virtual-environments)
+    * [Pip](#pip)
+    * [Virtual Environments](#virtual-environments)
 
 ## Heroku
 Install [Heroku CLI].
