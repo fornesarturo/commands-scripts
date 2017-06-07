@@ -2,7 +2,9 @@
 
 1. [Heroku](#heroku)
 2. [Processes](#processes)
-3. [Python](#pip)
+3. [Python](#python)
+    * [Pip](pip)
+    * [Virtual Environments](virtual-environments)
 
 ## Heroku
 Install [Heroku CLI].
@@ -42,8 +44,7 @@ fuser -k [port]/tcp
 
 
 ## Python
-1. [Pip](python-pip)
-2. [Virtual Environments](python-virtualenv)
+Some python utilities.
 
 #### Pip
 To save the Python modules installed with pip to a file that we'll call *requirements.txt* (needed for virtual environments and collaborating on a project). This command is the same for any pip version, just substitute pip for, say, pip2.
