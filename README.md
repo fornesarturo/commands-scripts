@@ -7,8 +7,7 @@
     * [Virtual Environments](#virtual-environments)
 
 ## Heroku
-Install [Heroku CLI].
-[Heroku CLI]: https://devcenter.heroku.com/articles/getting-started-with-python#set-up.
+Install [Heroku CLI](https://devcenter.heroku.com/articles/getting-started-with-python#set-up).
 
 To login.
 ```
