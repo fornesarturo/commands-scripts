@@ -5,6 +5,10 @@
 3. [Python](#python)
     * [Pip](#pip)
     * [Virtual Environments](#virtual-environments)
+4. [Github](#github)
+    * [Branches](#branches)
+    * [Project History](#project-history)
+    * [Misc](#misc)
 
 ## Heroku
 Install [Heroku CLI](https://devcenter.heroku.com/articles/getting-started-with-python#set-up).
@@ -97,4 +101,93 @@ rm -rf virtual_env/
 virtualenv my_env
 source activate my_env
 pip install -r requirements.txt
+```
+
+## Github
+
+##### Branches
+Create a new branch:
+```
+git checkout -b <branch_name>
+```
+```
+git branch <branch_name>
+```
+To see all branches:
+```
+git branch
+```
+for local branches, for remote branches:
+```
+git branch -r
+```
+To change to a branch:
+```
+git checkout <branch_name>
+```
+To pull a remote branch:
+```
+git checkout -b <new-local-branch-name> origin/remote-branch-name
+```
+Or:
+```
+git checkout -t origin/remote-branch-name
+```
+To remove a remote branch:
+```
+git push origin --delete <branch_name>
+```
+Or:
+```
+git push origin :<branch_name>
+```
+Then to propagate changes in local machines execute the following:
+```
+git fetch --all --prune
+```
+#### Project History
+You can view a timeline of your changes using:
+```
+git log
+```
+If you also want to see complete diffs at each step, use
+```
+git log -p
+```
+Often the overview of the change is useful to get a feel of each step:
+```
+git log --stat --summary
+```
+To just see the title and id of each commit.
+```
+git log --pretty=oneline
+```
+We can give this id to git show to see the details about this commit.
+```
+git show <number of the commit>
+```
+#### Misc
+* Removes files from your index and your working directory so they will not be tracked.
+```
+git rm <file_name>
+```
+* This will remove the file from git but not from the Disk:
+```
+git rm --cached <file_name>
+```
+* Move or rename a file, directory, or symlink.
+```
+git mv <file_name>
+```
+* Unstage a file
+```
+git reset HEAD <file_name>
+```
+* Delete a commit (HEAD~1 means one commit before HEAD)
+```
+git reset --hard HEAD~1
+```
+* Reset HEAD to a commit.
+```
+git reset --hard <sha1-commit-id>
 ```
