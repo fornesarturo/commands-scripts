@@ -1,36 +1,7 @@
-version 7.4
-if &cp | set nocp | endif
-set clipboard^=unnamedplus
-
-let s:cpo_save=&cpo
-set cpo&vim
-vmap gx <Plug>NetrwBrowseXVis
-nmap gx <Plug>NetrwBrowseX
-vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()
-nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(expand((exists("g:netrw_gx")? g:netrw_gx : '<cfile>')),netrw#CheckIfRemote())
-let &cpo=s:cpo_save
-unlet s:cpo_save
-set background=dark
-set backspace=indent,eol,start
-set fileencodings=ucs-bom,utf-8,default,latin1
-set helplang=en
-set nomodeline
-set printoptions=paper:letter
-set ruler
-set runtimepath=~/.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after
-set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
-" vim: set ft=vim :
-
-set tabstop=4
-set number
-" set clipboard^=unnamedplus
-set incsearch
-set cindent
+" Vundle configuration and plugins
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
-
-
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -43,13 +14,21 @@ Plugin 'VundleVim/Vundle.vim'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo.
-
+" plugin on GitHub repo
+" Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+" Plugin 'L9'
+" Git plugin not hosted on GitHub
+" Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+" Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
-
-Plugin 'derekwyatt/vim-scala'
+Plugin 'scrooloose/nerdtree'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -65,3 +44,20 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+" My configuration
+
+" set clipboard^=unnamedplus
+set background=dark
+set backspace=indent,eol,start
+set fileencodings=ucs-bom,utf-8,default,latin1
+set helplang=en
+set nomodeline
+set printoptions=paper:letter
+set ruler
+set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
+set tabstop=4
+set number
+set incsearch
+set cindent
+syntax on
